@@ -6,3 +6,6 @@ description = "A collection of sorting algorithms"
 license = "MIT"
 
 [dependencies]
+
+[dev-dependencies]
+rand = "0.5"
