@@ -1,6 +1,8 @@
 [package]
-name = "rust_sort"
+name = "sorts"
 version = "0.1.0"
 authors = ["Olav de Haas <o.n.dehaas@student.tudelft.nl>"]
+description = "A collection of sorting algorithms"
+license = "MIT"
 
 [dependencies]

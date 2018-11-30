@@ -1,8 +1,8 @@
 #![feature(test)]
 extern crate test;
-extern crate rust_sort;
+extern crate sorts;
 
-use rust_sort::bubble_sort;
+use sorts::bubble_sort;
 use test::Bencher;
 
 #[bench]
