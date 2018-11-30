@@ -1,6 +1,6 @@
 [package]
 name = "sorts"
-version = "0.2.0"
+version = "0.3.0"
 authors = ["Olav de Haas <o.n.dehaas@student.tudelft.nl>"]
 description = "A collection of sorting algorithms"
 keywords = ["sort", "sorting", "library"]
