@@ -21,16 +21,15 @@ pub fn insertion_sort<T: PartialOrd>(s: &mut [T]) {
     }
 }
 
-
 #[cfg(test)]
 mod tests {
     use super::*;
 
     #[test]
     fn correct_sort() {
-        let test = &mut [9,2,5,1,3,4,6,8,7];
+        let test = &mut [9, 2, 5, 1, 3, 4, 6, 8, 7];
         insertion_sort(test);
-        assert_eq!(test, &[1,2,3,4,5,6,7,8,9]);
+        assert_eq!(test, &[1, 2, 3, 4, 5, 6, 7, 8, 9]);
     }
 
     #[test]
