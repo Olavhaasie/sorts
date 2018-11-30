@@ -20,7 +20,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn correct_bubble_sort() {
+    fn correct_sort() {
         let test = &mut [4,3,1,2];
         bubble_sort(test);
         assert_eq!(test, &[1,2,3,4]);
@@ -41,7 +41,7 @@ mod tests {
     }
 
     #[test]
-    fn empty_bubble_sort() {
+    fn sort_empty() {
         let test: &mut [u8] = &mut [];
         bubble_sort(test);
         assert_eq!(test, &[]);
