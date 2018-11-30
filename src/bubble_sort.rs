@@ -38,16 +38,16 @@ mod tests {
 
     #[test]
     fn correct_sort() {
-        let test = &mut [4,3,1,2];
+        let test = &mut [4, 3, 1, 2];
         bubble_sort(test);
-        assert_eq!(test, &[1,2,3,4]);
+        assert_eq!(test, &[1, 2, 3, 4]);
     }
 
     #[test]
     fn sort_signed() {
-        let test = &mut [-4,3,1,2,-8];
+        let test = &mut [-4, 3, 1, 2, -8];
         bubble_sort(test);
-        assert_eq!(test, &[-8,-4,1,2,3]);
+        assert_eq!(test, &[-8, -4, 1, 2, 3]);
     }
 
     #[test]
