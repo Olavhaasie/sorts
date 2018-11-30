@@ -1,0 +1,6 @@
+[package]
+name = "rust_sort"
+version = "0.1.0"
+authors = ["Olav de Haas <o.n.dehaas@student.tudelft.nl>"]
+
+[dependencies]
