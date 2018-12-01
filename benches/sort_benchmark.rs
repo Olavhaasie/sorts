@@ -6,6 +6,8 @@ extern crate sorts;
 use criterion::{Bencher, Criterion, ParameterizedBenchmark};
 use rand::prelude::*;
 
+/// Creates a vec with random order.
+/// Vectors of the same size will have the same order.
 fn get_random_vec(n: usize) -> Vec<usize> {
     let mut rng: StdRng = StdRng::seed_from_u64(42);
     let mut vec: Vec<usize> = (0..n).collect();
@@ -13,35 +15,37 @@ fn get_random_vec(n: usize) -> Vec<usize> {
     vec
 }
 
-macro_rules! create_bench {
+/// Writes the bench function for any sort function.
+macro_rules! create_bench_fun {
     ($x:ident) => {
         |b: &mut Bencher, n: &usize| {
             let s = get_random_vec(*n);
             b.iter(|| sorts::$x(&mut s.clone()));
         }
+    };
+}
+
+/// Writes the benchmark for given set sizes and sort functions.
+macro_rules! create_bench {
+    ($p:expr, $f:ident, $($s:ident),*) => {
+        ParameterizedBenchmark::new(stringify!($f), create_bench_fun!($f), $p)
+            $(
+                .with_function(stringify!($s), create_bench_fun!($s))
+             )*
     }
 }
 
 fn bench(c: &mut Criterion) {
-    let params: Vec<usize> = vec![
-        10,
-        50,
-        100,
-        500,
-        1000,
-    ];
+    let sizes: Vec<usize> = vec![50, 100, 500, 1000, 5000, 10_000];
 
-    let bubble = create_bench!(bubble_sort);
-    let insertion = create_bench!(insertion_sort);
-    let selection = create_bench!(selection_sort);
-    let cocktail = create_bench!(cocktail_sort);
-    let merge = create_bench!(merge_sort);
-
-    let benchmark = ParameterizedBenchmark::new("bubble_sort", bubble, params)
-        .with_function("insertion_sort", insertion)
-        .with_function("selection_sort", selection)
-        .with_function("cocktail_sort", cocktail)
-        .with_function("merge_sort", merge);
+    let benchmark = create_bench!(
+        sizes,
+        bubble_sort,
+        insertion_sort,
+        selection_sort,
+        cocktail_sort,
+        merge_sort
+    );
 
     c.bench("sort_bench", benchmark);
 }
