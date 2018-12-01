@@ -1,3 +1,21 @@
+/// Sorts a slice in-place using
+/// [heap sort](https://en.wikipedia.org/wiki/Heapsort).
+///
+/// Heap sort is basically an improved version of selection sort. Where the
+/// selection is now done in logarithmic time instead of linear.
+///
+/// First it transforms the array into a max-heap and then swaps the first
+/// element with the last element of the array, effectively shrinking the
+/// heap. Then it must max heapify again since the swapped value is smaller
+/// than the original max value. This process is repeated until there is no
+/// heap left.
+///
+/// # Examples
+/// ```
+/// let mut vec = vec![5, 2, 7, 3, 9];
+/// sorts::heap_sort(&mut vec);
+/// assert_eq!(vec, &[2, 3, 5, 7, 9]);
+/// ```
 pub fn heap_sort<T: PartialOrd>(s: &mut [T]) {
     build_max_heap(s);
     for i in (0..s.len()).rev() {
