@@ -8,7 +8,14 @@ categories = ["algorithms"]
 license = "MIT"
 readme = "README.md"
 
+autobenches = false
+
 [dependencies]
 
 [dev-dependencies]
-rand = "0.5"
+rand = "0.6"
+criterion = "0.2"
+
+[[bench]]
+name = "sort_benchmark"
+harness = false
