@@ -15,7 +15,7 @@ not yet crossed are on the to-do list.
 - [X] Insertion sort
 - [X] Selection sort
 - [X] Cocktail sort
-- [ ] Gnome sort
+- [X] Gnome sort
 - [ ] Bogosort
 - [ ] Quicksort
 - [ ] Heap sort

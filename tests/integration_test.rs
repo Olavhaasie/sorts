@@ -3,14 +3,13 @@ extern crate sorts;
 /// Writes a test that tests sorting input.
 macro_rules! sort_test {
     ($test:ident, $sort:ident, $input:expr, $expected:expr) => {
-
         #[test]
         fn $test() {
             let vec: &mut [usize] = &mut $input;
             sorts::$sort(vec);
             assert_eq!(vec, &$expected);
         }
-    }
+    };
 }
 
 macro_rules! sort_tests {
