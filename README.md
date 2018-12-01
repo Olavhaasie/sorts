@@ -20,3 +20,11 @@ not yet crossed are on the to-do list.
 - [ ] Quicksort
 - [ ] Heap sort
 - [ ] Comb sort
+
+## Benchmarking
+The benchmark code is located in the `benches` directory. It can be run using
+
+    $ cargo bench
+
+The results are outputted to `target/criterion`. The benchmark tests the
+different sorting algorithms against different problem sizes.
