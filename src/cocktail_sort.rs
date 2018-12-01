@@ -44,29 +44,3 @@ pub fn cocktail_sort<T: PartialOrd>(s: &mut [T]) {
         }
     }
 }
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn correct_sort() {
-        let test = &mut [4, 3, 1, 2];
-        cocktail_sort(test);
-        assert_eq!(test, &[1, 2, 3, 4]);
-    }
-
-    #[test]
-    fn sort_sorted_list() {
-        let test = &mut [1, 2, 3, 4];
-        cocktail_sort(test);
-        assert_eq!(test, &[1, 2, 3, 4]);
-    }
-
-    #[test]
-    fn sort_empty() {
-        let test: &mut [u8] = &mut [];
-        cocktail_sort(test);
-        assert_eq!(test, &[]);
-    }
-}

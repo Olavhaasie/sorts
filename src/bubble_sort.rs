@@ -31,36 +31,3 @@ pub fn bubble_sort<T: PartialOrd>(sequence: &mut [T]) {
         }
     }
 }
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn correct_sort() {
-        let test = &mut [4, 3, 1, 2];
-        bubble_sort(test);
-        assert_eq!(test, &[1, 2, 3, 4]);
-    }
-
-    #[test]
-    fn sort_signed() {
-        let test = &mut [-4, 3, 1, 2, -8];
-        bubble_sort(test);
-        assert_eq!(test, &[-8, -4, 1, 2, 3]);
-    }
-
-    #[test]
-    fn sort_strings() {
-        let test = &mut ["bubble", "aardvark", "compiler"];
-        bubble_sort(test);
-        assert_eq!(test, &["aardvark", "bubble", "compiler"]);
-    }
-
-    #[test]
-    fn sort_empty() {
-        let test: &mut [u8] = &mut [];
-        bubble_sort(test);
-        assert_eq!(test, &[]);
-    }
-}

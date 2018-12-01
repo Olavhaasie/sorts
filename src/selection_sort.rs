@@ -26,23 +26,3 @@ pub fn selection_sort<T: PartialOrd>(s: &mut [T]) {
         }
     }
 }
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn correct_sort() {
-        let test = &mut [9, 2, 5, 1, 3, 4, 6, 8, 7];
-        selection_sort(test);
-        assert_eq!(test, &[1, 2, 3, 4, 5, 6, 7, 8, 9]);
-    }
-
-    #[test]
-    fn sort_empty_set() {
-        let test: &mut [u8] = &mut [];
-        selection_sort(test);
-        assert_eq!(test, &[]);
-    }
-
-}
