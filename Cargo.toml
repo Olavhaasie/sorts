@@ -1,9 +1,9 @@
 [package]
 name = "sorts"
-version = "0.3.0"
+version = "0.4.0"
 authors = ["Olav de Haas <o.n.dehaas@student.tudelft.nl>"]
 description = "A collection of sorting algorithms"
-keywords = ["sort", "sorting", "library"]
+keywords = ["sort", "sorting", "library", "benchmark"]
 categories = ["algorithms"]
 license = "MIT"
 readme = "README.md"
