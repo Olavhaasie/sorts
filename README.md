@@ -16,10 +16,10 @@ not yet crossed are on the to-do list.
 - [X] Selection sort
 - [X] Cocktail sort
 - [X] Gnome sort
-- [ ] Bogosort
+- [X] Heap sort
 - [ ] Quicksort
-- [ ] Heap sort
 - [ ] Comb sort
+- [ ] Bogosort
 
 ## Benchmarking
 The benchmark code is located in the `benches` directory. It can be run using

@@ -44,7 +44,8 @@ fn bench(c: &mut Criterion) {
         insertion_sort,
         selection_sort,
         cocktail_sort,
-        merge_sort
+        merge_sort,
+        heap_sort
     );
 
     c.bench("sort_bench", benchmark);

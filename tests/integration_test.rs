@@ -34,5 +34,6 @@ sort_tests! {
     gnome_sort,
     insertion_sort,
     selection_sort,
-    merge_sort
+    merge_sort,
+    heap_sort
 }
