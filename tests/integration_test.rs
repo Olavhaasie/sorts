@@ -23,6 +23,7 @@ macro_rules! sort_tests {
             sort_test!(sort_reversed, $sort, [9, 8, 7, 6, 5], [5, 6, 7, 8, 9]);
             sort_test!(sort_empty, $sort, [], []);
             sort_test!(sort_one, $sort, [100], [100]);
+            sort_test!(sort_two, $sort, [9, 8], [8, 9]);
         }
         )*
     }
@@ -35,5 +36,6 @@ sort_tests! {
     insertion_sort,
     selection_sort,
     merge_sort,
-    heap_sort
+    heap_sort,
+    comb_sort
 }
