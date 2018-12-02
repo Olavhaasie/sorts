@@ -28,3 +28,5 @@ The benchmark code is located in the `benches` directory. It can be run using
 
 The results are outputted to `target/criterion`. The benchmark tests the
 different sorting algorithms against different problem sizes.
+
+![sorting algorithms running times](bench.png)

@@ -36,7 +36,7 @@ macro_rules! create_bench {
 }
 
 fn bench(c: &mut Criterion) {
-    let sizes: Vec<usize> = vec![50, 100, 500, 1000, 5000, 10_000];
+    let sizes: Vec<usize> = vec![50, 100, 250, 500, 750, 1000, 1500, 2000, 2500];
 
     let benchmark = create_bench!(
         sizes,
