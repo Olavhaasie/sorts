@@ -18,7 +18,7 @@ not yet crossed are on the to-do list.
 - [X] Gnome sort
 - [X] Heapsort
 - [X] Comb sort
-- [ ] Quicksort
+- [X] Quicksort
 - [ ] Bucket sort
 - [ ] Radix sort
 - [ ] Shellsort

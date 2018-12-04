@@ -38,7 +38,7 @@ macro_rules! create_bench {
 fn bench(c: &mut Criterion) {
     let sizes: Vec<usize> = vec![50, 100, 250, 500, 750, 1000, 1500, 2000, 2500];
 
-    let benchmark = create_bench!(
+    let benchmark = create_bench! {
         sizes,
         bubble_sort,
         insertion_sort,
@@ -48,7 +48,7 @@ fn bench(c: &mut Criterion) {
         heap_sort,
         comb_sort,
         quick_sort
-    );
+    };
 
     c.bench("sort_bench", benchmark);
 }
