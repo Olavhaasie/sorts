@@ -38,5 +38,6 @@ sort_tests! {
     merge_sort,
     heap_sort,
     comb_sort,
-    quick_sort
+    quick_sort,
+    shell_sort
 }
