@@ -1,7 +1,5 @@
 #[macro_use]
 extern crate criterion;
-extern crate rand;
-extern crate sorts;
 
 use criterion::{Bencher, Criterion, ParameterizedBenchmark};
 use rand::prelude::*;

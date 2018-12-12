@@ -7,6 +7,7 @@ keywords = ["sort", "sorting", "library", "benchmark"]
 categories = ["algorithms"]
 license = "MIT"
 readme = "README.md"
+edition = "2018"
 
 autobenches = false
 
