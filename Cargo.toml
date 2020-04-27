@@ -1,10 +1,13 @@
 [package]
 name = "sorts"
-version = "0.6.0"
+version = "0.6.1"
 authors = ["Olav de Haas <o.n.dehaas@student.tudelft.nl>"]
 description = "A collection of sorting algorithms"
+repository = "https://github.com/Olavhaasie/sorts"
+
 keywords = ["sort", "sorting", "library", "benchmark"]
 categories = ["algorithms"]
+
 license = "MIT"
 readme = "README.md"
 edition = "2018"
@@ -14,8 +17,8 @@ autobenches = false
 [dependencies]
 
 [dev-dependencies]
-rand = "0.6"
-criterion = "0.2"
+rand = "0.7"
+criterion = "0.3"
 
 [[bench]]
 name = "sort_benchmark"

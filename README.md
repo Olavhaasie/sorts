@@ -1,7 +1,8 @@
 # Sorts
 
 [![Crates.io](https://img.shields.io/crates/v/sorts.svg)](https://crates.io/crates/sorts)
-![Crates.io](https://img.shields.io/crates/l/sorts.svg)
+[![docs.rs](https://img.shields.io/badge/docs-sorts-green)](https://docs.rs/sorts)
+[![license](https://img.shields.io/crates/l/sorts.svg)](LICENSE)
 [![Crates.io](https://img.shields.io/crates/d/sorts.svg)](https://crates.io/crates/sorts)
 
 A small sorting algorithms collection written in Rust _for learning purposes_.
